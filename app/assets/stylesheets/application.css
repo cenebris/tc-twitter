@@ -23,3 +23,8 @@ background: -webkit-linear-gradient(90deg, #FDFC47 10%, #24FE41 90%); /* Chrome 
   background:         linear-gradient(90deg, #FDFC47 10%, #24FE41 90%); /* W3C */
         
 }
+
+.tweet {
+	
+	margin:20px;
+}
