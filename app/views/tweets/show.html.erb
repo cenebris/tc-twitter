@@ -17,14 +17,14 @@
 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              tweets_path, :class => 'btn btn-default'  %>
+              tweets_path, :class => 'btn btn-default #{ApplicationController::BUTTON_HOVER}'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_tweet_path(@tweet), :class => 'btn btn-default' %>
+              edit_tweet_path(@tweet), :class => 'btn btn-default #{ApplicationController::BUTTON_HOVER}' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               tweet_path(@tweet),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-danger #{ApplicationController::BUTTON_HOVER}' %>
 
 </div>
 </div>
