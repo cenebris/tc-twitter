@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   respond_to :html
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.all.sort.reverse
     respond_with(@tweets)
   end
 
