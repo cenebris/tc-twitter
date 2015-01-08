@@ -15,7 +15,7 @@
  */
 
  body {
- 	margin-top: 70px;
+  margin-top: 90px;
   background: -webkit-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* FF3.6+ */
   background:     -ms-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* IE10 */
@@ -24,10 +24,14 @@
 
 }
 
-.tweet {
-		
+h2 a:hover {
+text-decoration: none;
 }
 
 .app {
-	max-width: 700px;
+	max-width: 750px;
+}
+
+.newtweet {
+	font-weight: bold;
 }

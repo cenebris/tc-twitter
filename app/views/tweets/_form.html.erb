@@ -23,9 +23,9 @@
     <%= error_span(@tweet[:body]) %>
   </div>
 
-
-  <%= f.submit nil, :class => 'btn btn-primary #{ApplicationController::BUTTON_HOVER}' %>
+<div class=""
+  <%= f.submit nil, :class => 'btn btn-lg btn-primary #{ApplicationController::BUTTON_HOVER}' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            tweets_path, :class => 'btn btn-default #{ApplicationController::BUTTON_HOVER}' %>
+            tweets_path, :class => 'btn btn-lg btn-default #{ApplicationController::BUTTON_HOVER}' %>
 
 <% end %>
