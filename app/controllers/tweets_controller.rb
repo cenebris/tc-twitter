@@ -1,6 +1,5 @@
 class TweetsController < ApplicationController
-  BUTTON_HOVER = "hvr-grow-shadow"
-
+  
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   respond_to :html

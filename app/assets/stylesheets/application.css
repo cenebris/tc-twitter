@@ -24,12 +24,10 @@
 
 }
 
-.container {
-	margin: auto;
-}
+
 
 .well {
-	margin: 7px;
+	margin: 3px;
 }
 
 h2 a:hover {
@@ -37,14 +35,18 @@ text-decoration: none;
 }
 
 .app {
-	max-width: 1300px;
+	max-width: 1600px;
 }
 
 .newtweetbutton {
 	font-weight: bold;
 }
 
-.tweet:hover {
-background: black;
-color:white;
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
 }
