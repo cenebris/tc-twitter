@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   
+  
+  # validates :email, presence: true
+  # validates :username, presence: true
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -8,5 +11,5 @@ class User < ActiveRecord::Base
 
 
   has_many :tweets
-  has_one :username
+  
 end
