@@ -11,5 +11,10 @@ class User < ActiveRecord::Base
 
 
   has_many :tweets
-  
+
+def to_s
+username
+end
+
+
 end

@@ -35,7 +35,8 @@ text-decoration: none;
 }
 
 .app {
-	max-width: 1600px;
+	max-width: 1200px;
+  min-width: 400px;
 }
 
 .newtweetbutton {
@@ -48,5 +49,6 @@ text-decoration: none;
 .col-centered {
     display:inline-block;
     float:none;
-    text-align:left;
+    /*text-align:left;*/
 }
+
