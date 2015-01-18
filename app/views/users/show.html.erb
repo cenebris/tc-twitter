@@ -6,7 +6,7 @@
 <h1>All Tweets by <%= @user.username %>:</h1>
 </div>
 
-<% @user.tweets.each do |tweet| %>
+<% @user.tweets.order(created_at: :desc).each do |tweet| %>
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 well col-centered tweet text-center">
 
 <% if tweet.user == current_user %> <!-- If currently logged in user is creator of Tweet, user can go directly to Update action from Index, no need to go to Show -->
@@ -21,4 +21,5 @@
 
 </div>
 </div>
+
 

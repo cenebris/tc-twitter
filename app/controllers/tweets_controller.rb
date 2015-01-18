@@ -7,12 +7,15 @@ class TweetsController < ApplicationController
   
 
   def index
-    @tweets = Tweet.paginate(:page => params[:page], :per_page => 30)
-    # @tweets = Tweet.all.sort.reverse
+    @tweets = Tweet.order(created_at: :desc).paginate(:page => params[:page], :per_page => 20)
     respond_with(@tweets)   
   end
 
   def show
+    @comment = Comment.new
+    @comment.author_name = current_user.username
+    @comment.tweet_id = @tweet.id
+
     respond_with(@tweet)
   end
 
@@ -22,6 +25,8 @@ class TweetsController < ApplicationController
   end
 
   def edit
+    @comment = Comment.new
+    
   end
 
   def create

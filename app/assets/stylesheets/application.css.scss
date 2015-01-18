@@ -1,3 +1,5 @@
+
+
 /*
 * This is a manifest file that'll be compiled into application.css, which will include all the files
 * listed below.
@@ -13,6 +15,7 @@
 *= require_tree .
 *= require_self
 */
+
 body {
 margin-top: 90px;
 background: -webkit-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* Chrome 10+, Saf5.1+ */
@@ -23,7 +26,7 @@ background: linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* W3C */
 }
 
 .well {
-margin: 3px;
+margin: 5px;
 }
 
 h2 a:hover {
@@ -49,5 +52,9 @@ float:none;
 }
 
 .pagination-wrapper {
-margin-top: 200px;
+margin-top: 50px;
+}
+
+.comment {
+	text-align: left;
 }

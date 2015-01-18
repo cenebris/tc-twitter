@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150113214232) do
+ActiveRecord::Schema.define(version: 20150118202550) do
+
+  create_table "comments", force: true do |t|
+    t.string   "author_name"
+    t.text     "body"
+    t.integer  "tweet_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["tweet_id"], name: "index_comments_on_tweet_id"
 
   create_table "tweets", force: true do |t|
     t.text     "body"
