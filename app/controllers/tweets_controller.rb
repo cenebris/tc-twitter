@@ -4,9 +4,12 @@ class TweetsController < ApplicationController
 
   respond_to :html
 
+  
+
   def index
-    @tweets = Tweet.all.sort.reverse
-    respond_with(@tweets)
+    @tweets = Tweet.paginate(:page => params[:page], :per_page => 30)
+    # @tweets = Tweet.all.sort.reverse
+    respond_with(@tweets)   
   end
 
   def show
