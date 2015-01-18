@@ -5,3 +5,6 @@ one:
 
 two:
   body: MyText2
+
+three:
+  body: MyText3

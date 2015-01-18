@@ -1,13 +1,18 @@
 <div class="container app">
 <div class="row">
 <div class="col-lg-12">
+<div class="well">
 
 <%- model_class = Tweet -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+  <h1 class="text-center">What are you thinking of?</h1>
+  <h3 class="text-center">Max. 160 characters</h3>
 </div>
+
+
 <%= render :partial => 'form' %>
 
+</div>
 </div>
 </div>
 </div>

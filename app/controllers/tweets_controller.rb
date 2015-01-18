@@ -24,7 +24,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = current_user.tweets.build(tweet_params)
     @tweet.save
-    respond_with(@tweet)
+    redirect_to root_path #After creation of Tweet go to Index action, not Show
   end
 
   def update

@@ -18,14 +18,19 @@
   <div class="form-group">
     <%= f.label " ", :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_area :body, :class => 'form-control' %>
+      <%= f.text_area :body, :class => 'form-control', :maxlength => 160 %>
     </div>
     <%= error_span(@tweet[:body]) %>
   </div>
 
 <div class="control-group">
-  <%= f.submit nil, :class => 'btn btn-lg btn-primary #{ApplicationController::BUTTON_HOVER}' %>
+  <%= f.submit nil, :class => 'btn btn-lg btn-primary' %><!-- Render Delete button only on Update action, not New -->
+  <% if current_page?(action: 'new') %> 
+  <% else %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")), tweet_path(@tweet), :method => 'delete', :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-lg btn-danger' %>
+<% end %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            tweets_path, :class => 'btn btn-lg btn-default #{ApplicationController::BUTTON_HOVER}' %>
+            tweets_path, :class => 'btn btn-lg btn-default' %>
 
 <% end %>
+
