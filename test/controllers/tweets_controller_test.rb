@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class TweetsControllerTest < ActionController::TestCase
+include Devise::TestHelpers
+  
   setup do
     @tweet = tweets(:one)
   end
