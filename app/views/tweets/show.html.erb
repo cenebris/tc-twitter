@@ -7,6 +7,7 @@
 <div class="well tweet text-center">
 
 <h4><%= link_to @tweet.user, @tweet.user %></h4>
+<%= image_tag @tweet.image(:large), class: "img-thumbnail img-responsive" %>
 <h1><%= @tweet %></h1>
 
 <!--

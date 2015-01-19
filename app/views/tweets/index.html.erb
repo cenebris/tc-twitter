@@ -9,6 +9,11 @@
 
 <h5><%= link_to tweet.user, tweet.user %></h5>
 
+
+<%= link_to image_tag(tweet.image(:medium)), url_for(tweet), class:"img-thumbnail img-responsive" if tweet.image.present? %>
+
+
+
 <h3><%= link_to tweet.body, tweet %></h3>
 
 <% if tweet.comments.size==1 %>
