@@ -5,7 +5,6 @@ class TweetsController < ApplicationController
   respond_to :html
 
   
-
   def index
     @tweets = Tweet.order(created_at: :desc).paginate(:page => params[:page], :per_page => 20)
     respond_with(@tweets)   
@@ -13,7 +12,7 @@ class TweetsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comment.author_name = current_user.username
+    @comment.author_name = current_user.username if current_user.present?
     @comment.tweet_id = @tweet.id
 
     respond_with(@tweet)
