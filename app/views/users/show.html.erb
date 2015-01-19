@@ -9,10 +9,18 @@
 <% @user.tweets.order(created_at: :desc).each do |tweet| %>
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 well col-centered tweet text-center">
 
+<%= link_to image_tag(tweet.image(:medium)), url_for(tweet), class:"img-thumbnail img-responsive" if tweet.image.present? %>
+
 <% if tweet.user == current_user %> <!-- If currently logged in user is creator of Tweet, user can go directly to Update action from Index, no need to go to Show -->
 <h3><%= link_to tweet.body, edit_tweet_path(tweet) %></h3>
 <% else %>
 <h3><%= link_to tweet.body, tweet %></h3>
+<% end %>
+
+<% if tweet.comments.size==1 %>
+<h5 class="commentsonindespage">1 comment</h5>
+<% elsif tweet.comments.size>1 %>
+<h5 class="commentsonindespage"><%= tweet.comments.size %> comments</h5>
 <% end %>
 
 </div>

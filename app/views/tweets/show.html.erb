@@ -10,9 +10,6 @@
 <%= image_tag @tweet.image(:large), class: "img-thumbnail img-responsive" %>
 <h1><%= @tweet %></h1>
 
-<!--
-<%= link_to t('.back', :default => t("helpers.links.back")), tweets_path, :class => 'btn btn-default'  %>
--->
 
 <% if @tweet.user == current_user %> 
 
